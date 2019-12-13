@@ -17,7 +17,7 @@ julia> out_channel = Channel(32)
 Channel{Any}(sz_max:32,sz_curr:0)
 
 julia> start(intcode("3,0,4,0,99", stdin, out_channel))
-Enter input: 200
+200
 
 julia> take!(out_channel)
 200

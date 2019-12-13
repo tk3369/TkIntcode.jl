@@ -31,7 +31,7 @@ intcode(s::AbstractString, input, output) = Intcode(read_code(s), 0, input, outp
 read_input(c::Channel) = take!(c)
 write_output(c::Channel, data) = put!(c, data)
 
-read_input(io::IO) = begin print("Enter input: "); parse(Int,readline(io)); end
+read_input(io::IO) = parse(Int,readline(io))
 write_output(io::IO, data) = println(io, data)
 
 read_input(f::Function) = f()
